@@ -253,7 +253,7 @@ main:	mov	bp,AST_BASE_PORT
 	push	ax			; ..
 	push	cx			;  :
 	mov	cl,4			;  :
-	shr	al,cl			;  : convert al from unpacked BCD
+	shr	al,cl			;  : convert al from packed BCD
 	pop	cx			;  : to binary
 	pop	bx			;  :
 	mov	bh,10			;  :
