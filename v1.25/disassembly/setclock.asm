@@ -1,5 +1,6 @@
 ; MS-DOS v1.25 SETCLOCK.COM
 ; SHA-256: 2ad14b49a9206e47a6942c9e2bc738c00d804d34cb8d693312228cf49820e508
+; Binary is part of MS-DOS v1.25 code as released by MS under MIT License
 ; Use the Netwide Assembler (nasm) to reproduce the original program
 
 	bits	16
