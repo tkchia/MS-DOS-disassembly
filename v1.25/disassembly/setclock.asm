@@ -3,6 +3,9 @@
 ; Binary is part of MS-DOS v1.25 code as released by MS under MIT License
 ; Use the Netwide Assembler (nasm) to reproduce the original program
 
+; This is apparently a Terminate-and-Stay-Resident (TSR) program which reads
+; and sets a particular type of hardware real time clock.
+
 	bits	16
 
 	org	0x0100
