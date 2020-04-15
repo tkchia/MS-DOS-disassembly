@@ -27,7 +27,7 @@ org_int_0x21:
 ; New int 0x21 handling routine.
 new_int_0x21:
 	cmp	ah,0x2b			; If ah is neither 0x2b (set system
-	jae	.may_set_date_time	; date) or 0x2d (set system time),
+	jae	.may_set_date_time	; date) nor 0x2d (set system time),
 .ignore:				; just hand over to the original
 	jmp	far [cs:org_int_0x21]	; int 0x21 routine
 .may_set_date_time:
@@ -221,7 +221,7 @@ main:	mov	bp,AST_BASE_PORT
 	mov	ax,[es:0x21*4+2]
 	mov	es,ax
 	mov	cx,new_int_0x21.done-new_int_0x21
-	rep cmpsb
+	repz cmpsb
 	pop	es
 	jnz	.not_instd
 	mov	dx,msg_already
