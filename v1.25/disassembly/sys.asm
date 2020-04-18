@@ -200,7 +200,7 @@ compare_sizes:
 	mov	ah,0xf			; Open the target file
     dw 0xd38b ; mov dx,bx
 	int	0x21
-    dw 0xc00a ; or al,al			; If the file cannot be opened, exit
+    dw 0xc00a ; or al,al		; If the file cannot be opened, exit
 	jnz	err_no_room		; immediately
 	mov	ax,[bx+File.fsz]	; Compute the number of clusters in
     dw 0xd233 ; xor dx,dx		; the target file --- divide the
