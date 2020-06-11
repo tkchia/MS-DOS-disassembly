@@ -95,7 +95,7 @@ CODE:0041                                                           ; LOCATE:ERR
 CODE:0041 B4 09                             mov     ah, 9
 CODE:0043 CD 21                             int     21h             ; DOS - PRINT STRING
 CODE:0043                                                           ; DS:DX -> string terminated by "$"
-CODE:0045 CB                                retf                    ; * Return to PSP:0
+CODE:0045 CB                                retf                    ; * FAR return to MS-DOS
 CODE:0046                   ; ───────────────────────────────────────────────────────────────────────────
 CODE:0046
 CODE:0046                   TOOBIG:                                 ; CODE XREF: LOCATE+78↓j
