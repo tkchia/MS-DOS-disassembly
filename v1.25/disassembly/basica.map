@@ -325,8 +325,17 @@
  0000:233A       GTASPC
  0000:234D       PIXSIZ
  0000:2351       PGINIT
+ 0000:237E       pgtacs
+ 0000:2388       pgtrst
+ 0000:238A       pgtset
+ 0000:2394       pgtand
+ 0000:239F       pgtor
+ 0000:23A6       pgtxor
  0000:23AD       NREAD
+ 0000:23E8       nrdbyt
  0000:2425       NWRITE
+ 0000:247B       nwrbyt
+ 0000:2488       nrwbeg
  0000:24A3       PNTINI
  0000:24B2       slrchg
  0000:24C6       slrl
@@ -467,7 +476,7 @@
  0422:083C       RTPROG
  0422:083D       SKPCNT
  0422:083F       MOVCNT
- 0422:0842       pntpat
+ 0422:0842       borpat
  0422:0843       OCTAVE
  0422:0844       BEATS
  0422:0845       NOTELN
@@ -482,6 +491,9 @@
  0422:0853       MCLLEN
  0422:0854       MCLTAB
  0422:0856       PUTFLG
+ 0422:0857       pgtshf
+ 0422:0859       pgtary
+ 0422:085B       pgtact
  0422:085D       strev
  0422:0865       ONGSBF
  0422:0867       TRPTBL
