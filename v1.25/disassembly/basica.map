@@ -99,10 +99,12 @@
  0000:0A0B       CRFIN
  0000:0A17       CNSGET
  0000:0A29       GIVINT
+ 0000:0A35       DERNMF
  0000:0A47       FRESTR
  0000:0A59       FCERR
  0000:0A6B       PTRGET
  0000:0A9B       CRDO
+ 0000:0AB9       DERFAO
  0000:0ABF       FRMEVL
  0000:0ADD       CONINT
  0000:0AEF       LINPRT
@@ -198,12 +200,18 @@
  0000:11B7       TIMES
  0000:12F6       WIDTHS
  0000:135F       WRITE
+ 0000:141D       aCom1
+ 0000:1422       aCom2
+ 0000:1427       aLpt1
+ 0000:142C       aLpt2
+ 0000:1431       aLpt3
  0000:14B1       STPTRP
  0000:14ED       FRETRP
  0000:1504       GOTRP
  0000:1514       GOTRPL
  0000:1527       GOTRPX
  0000:1529       GOTRP2
+ 0000:1561       EVADR
  0000:15D3       isrcbk
  0000:15F0       irq0
  0000:1626       i0nxt
@@ -212,6 +220,7 @@
  0000:16C0       ticpen
  0000:16D7       nopen
  0000:170A       ticpfi
+ 0000:170E       ticsti
  0000:1759       ONGOTO
  0000:17E5       GOSUB
  0000:1801       RETURN
@@ -377,6 +386,9 @@
  0000:339F       enqbyt
  0000:33B9       queini
  0000:33E7       chkctc
+ 0000:353D       combas
+ 0000:354A       COMOPN
+ 0000:35F1       GOTPTY
  0000:3AD3       nullsub_5
  0000:3B89       HEDING
  0000:3BA9       aVersionA1_10Co
@@ -397,6 +409,7 @@
  0422:0029       CRTWID
  0422:002E       CURLIN
  0422:0030       TXTTAB
+ 0422:0034       penena
  0422:0035       pen0v
  0422:0036       penprv
  0422:0037       pen1v
@@ -407,7 +420,7 @@
  0422:003E       pen6vm
  0422:003F       pen9vm
  0422:0040       pen8vm
- 0422:0045       strena
+ 0422:0045       stiena
  0422:0048       crtmod
  0422:0049       ACTPAG
  0422:004A       vispag
@@ -494,13 +507,15 @@
  0422:0857       pgtshf
  0422:0859       pgtary
  0422:085B       pgtact
- 0422:085D       strev
+ 0422:085D       stiev
  0422:0865       ONGSBF
  0422:0867       TRPTBL
  E600:069A       CONSTR@
  E600:076E       READYR@
  E600:0791       DERIOE@
  E600:07A0       DERRPE@
+ E600:07A3       DERFAO@
+ E600:07A6       DERNMF@
  E600:07BE       SNERR@
  E600:07D3       MOERR@
  E600:07D8       ERROR@
