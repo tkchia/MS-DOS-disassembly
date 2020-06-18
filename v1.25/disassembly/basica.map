@@ -211,7 +211,7 @@
  0000:1514       GOTRPL
  0000:1527       GOTRPX
  0000:1529       GOTRP2
- 0000:1561       EVADR
+ 0000:1561       evadr
  0000:15D3       isrcbk
  0000:15F0       irq0
  0000:1626       i0nxt
@@ -221,6 +221,7 @@
  0000:16D7       nopen
  0000:170A       ticpfi
  0000:170E       ticsti
+ 0000:174B       rdtrig
  0000:1759       ONGOTO
  0000:17E5       GOSUB
  0000:1801       RETURN
