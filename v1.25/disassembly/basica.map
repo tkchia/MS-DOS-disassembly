@@ -102,6 +102,8 @@
  0000:0A35       DERNMF
  0000:0A47       FRESTR
  0000:0A59       FCERR
+ 0000:0A5F       READY
+ 0000:0A65       OMERR
  0000:0A6B       PTRGET
  0000:0A9B       CRDO
  0000:0AB9       DERFAO
@@ -143,7 +145,7 @@
  0000:0C86       ERROR
  0000:0C8B       PLOOP2
  0000:0C90       PPSWRT
- 0000:0C95       OMERR
+ 0000:0C95       OMERRR
  0000:0C9A       SNERR
  0000:0C9F       RENCRN
  0000:0CA4       NOTRFN
@@ -198,6 +200,7 @@
  0000:10C6       GET
  0000:10E1       DATES
  0000:11B7       TIMES
+ 0000:124A       LPOS
  0000:12F6       WIDTHS
  0000:135F       WRITE
  0000:141D       aCom1
@@ -387,17 +390,22 @@
  0000:339F       enqbyt
  0000:33B9       queini
  0000:33E7       chkctc
+ 0000:34EA       sndlp1
+ 0000:34EF       sndlp2
+ 0000:34F4       sndlp3
+ 0000:34F7       sndlpt
  0000:353D       combas
  0000:354A       COMOPN
  0000:35F1       GOTPTY
  0000:3AD3       nullsub_5
  0000:3B89       HEDING
  0000:3BA9       aVersionA1_10Co
+ 0000:3BD9       a12Apr82license
  0000:3C0D       stmdxi
  0000:3C2C       fundxi
  0000:3C33       INIT2
  0000:3D9F       hkstfn
- 0000:3DB6       SNDINI
+ 0000:3DB6       GWINI
  0000:3FE7       INIT
  0000:400A       INIT3
  0000:40B2       WASMF
@@ -408,6 +416,7 @@
  0422:0006       DSEGZ
  0422:0028       ERRFLG
  0422:0029       CRTWID
+ 0422:002C       TOPMEM
  0422:002E       CURLIN
  0422:0030       TXTTAB
  0422:0034       penena
@@ -428,6 +437,7 @@
  0422:004F       txtatr
  0422:0055       pixbts
  0422:005E       bioccf
+ 0422:0063       poslp1
  0422:0065       sndpnd
  0422:0066       nottic
  0422:00B8       KBUF
@@ -470,6 +480,8 @@
  0422:06FD       MINDEL
  0422:071A       crtini
  0422:072B       CSWSIZ
+ 0422:0739       poslp2
+ 0422:073A       poslp3
  0422:073F       stmdsx
  0422:07D3       fundsx
  0422:081D       CRCSUM
@@ -520,6 +532,7 @@
  E600:07BE       SNERR@
  E600:07D3       MOERR@
  E600:07D8       ERROR@
+ E600:08B6       READY@
  E600:08D3       MAIN@
  E600:0BD8       RENCRN@
  E600:0D3F       NOTRFN@
@@ -544,7 +557,8 @@
  E600:2C71       CRDO@
  E600:2C78       CRFIN@
  E600:2C9D       INKEY@
- E600:2CFE       OMERR@
+ E600:2CF4       OMERR@
+ E600:2CFE       OMERRR@
  E600:2D1D       SCRTCH@
  E600:3DA9       WRITE@
  E600:3FA5       GETPTR@
