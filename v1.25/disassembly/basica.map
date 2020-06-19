@@ -403,12 +403,12 @@
  0000:3BD9       a12Apr82license
  0000:3C0D       stmdxi
  0000:3C2C       fundxi
- 0000:3C33       INIT2
+ 0000:3C33       init2
  0000:3D9F       hkstfn
  0000:3DB6       GWINI
  0000:3FE7       INIT
- 0000:400A       INIT3
- 0000:40B2       WASMF
+ 0000:400A       init3
+ 0000:40B2       wasmf
  0000:40E9       WASS
  0000:40F9       WASC
  0000:420D       WORDS
