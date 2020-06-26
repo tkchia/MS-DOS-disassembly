@@ -239,6 +239,9 @@
  0000:19B1       GOTBRD
  0000:19BB       ??L000
  0000:19E3       POPTRT
+ 0000:1A03       PNTLP1
+ 0000:1A1C       PDOWN
+ 0000:1A1F       PDOWN2
  0000:1AA4       RTOVH1
  0000:1AE2       SCANR1
  0000:1AF5       SCANL1
@@ -440,6 +443,8 @@
  0422:0063       poslp1
  0422:0065       sndpnd
  0422:0066       nottic
+ 0422:0068       csrshp
+ 0422:006A       sftlft
  0422:00B8       KBUF
  0422:01F6       BUFM1
  0422:01F7       BUF
