@@ -1,6 +1,8 @@
 Disassembly of programs in MS-DOS v1.25 which have (so far) only been released as binaries, not source code.
 
-See [`v1.25/disassembly/`](v1.25/disassembly/).
+There is also some code for building the MS-DOS v1.25 development tools `ASM.ASM`, `HEX2BIN.ASM`, and `TRANS.ASM` with the help of modern tools.
+
+See [`v1.25/disassembly/`](v1.25/disassembly/) and [`v1.25/porting/`](v1.25/porting/).
 
 ![](msdos-diskcopy.png)
 
