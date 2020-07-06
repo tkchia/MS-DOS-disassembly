@@ -155,6 +155,10 @@
 %endif
 %endmacro
 
+%macro	JB	1
+	?j.cc	%1,jb
+%endmacro
+
 %macro	JC	1
 	?j.cc	%1,jc
 %endmacro
@@ -165,6 +169,10 @@
 
 %macro	JNZ	1
 	?j.cc	%1,jnz
+%endmacro
+
+%macro	JS	1
+	?j.cc	%1,js
 %endmacro
 
 %macro	JZ	1
