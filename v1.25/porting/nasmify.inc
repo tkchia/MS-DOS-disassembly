@@ -34,7 +34,6 @@
 %define	STOB	stosb
 %define	STOW	stosw
 
-%define	ALIGN	$ALIGN
 %define	DEFAULT	$DEFAULT
 %define	ORG	$ORG
 %define	RCL	$RCL
@@ -46,8 +45,12 @@
 %define	RSI	$RSI
 %define	RDI	$RDI
 
-%macro	$ALIGN	0
+%macro	ALIGN	0
 	alignb	2
+%endmacro
+
+%macro	ALIGN	1
+	$ALIGN%1
 %endmacro
 
 %macro	AND	3
@@ -108,11 +111,19 @@
 	resb	%1
 %endmacro
 
+%macro	DW	1
+%ifidn	{ALIGN},{%1}
+	dw	$ALIGN
+%else
+	dw	%1
+%endif
+%endmacro
+
 %macro	INC	1
 %iftoken %1
 	inc	%1
 %else
-	inc	WORD %1
+	inc	word %1
 %endif
 %endmacro
 
