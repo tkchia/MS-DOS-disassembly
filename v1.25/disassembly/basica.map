@@ -106,6 +106,7 @@
  0000:0A65       OMERR
  0000:0A6B       PTRGET
  0000:0A9B       CRDO
+ 0000:0AA7       csrshw
  0000:0AB9       DERFAO
  0000:0ABF       FRMEVL
  0000:0ADD       CONINT
@@ -215,6 +216,7 @@
  0000:1527       GOTRPX
  0000:1529       GOTRP2
  0000:1561       evadr
+ 0000:156B       irq1
  0000:15D3       isrcbk
  0000:15F0       irq0
  0000:1626       i0nxt
@@ -393,6 +395,7 @@
  0000:339F       enqbyt
  0000:33B9       queini
  0000:33E7       chkctc
+ 0000:340E       DERDNA
  0000:34EA       sndlp1
  0000:34EF       sndlp2
  0000:34F4       sndlp3
@@ -409,6 +412,7 @@
  0000:3C33       init2
  0000:3D9F       hkstfn
  0000:3DB6       GWINI
+ 0000:3E85       iniprt
  0000:3FE7       INIT
  0000:400A       init3
  0000:40B2       wasmf
@@ -483,6 +487,8 @@
  0422:06F6       atrpat
  0422:06FB       MAXDEL
  0422:06FD       MINDEL
+ 0422:0712       oirovf
+ 0422:0716       oirdv0
  0422:071A       crtini
  0422:072B       CSWSIZ
  0422:0739       poslp2
@@ -575,6 +581,7 @@
  E600:4871       XCHGX@
  E600:493E       DOGRP2@
  E600:52E7       CLS@
+ E600:54D0       csrshw@
  E600:55E2       PENS@
  E600:56FA       STRIGS@
  E600:6426       PUSHF@
