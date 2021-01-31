@@ -7,32 +7,43 @@
 ;
 ; ───────────────────────────────────────────────────────────────────────────
 
+; address field structure for disk formatting operations
 CHRN            struc ; (sizeof=0x4)
-C               db ?
-H               db ?
-R               db ?
-N               db ?
+C               db ?                    ; track (cylinder) no.
+H               db ?                    ; side (head) no.
+R               db ?                    ; sector (record) no.
+N               db ?                    ; indicator for sector size
+                                        ; (1: 256, 2: 512, 3: 1024, etc.)
 CHRN            ends
 
 ; ───────────────────────────────────────────────────────────────────────────
 
+; MS-DOS program segment prefix fields
 ; enum __PSP__
-CPMMEM           = 2
-FCB1             = 5Ch
-SOURCE           = 5Ch
-DEST             = 5Dh
-FCB2             = 6Ch
-ARGLEN           = 80h
-ARGS             = 81h
-
+CPMMEM           = 2                    ; end of memory available to program
+FCB1             = 5Ch                  ; File Control Block (FCB) for
+                                        ; 1st command line argument
+SOURCE           = 5Ch                  ; DISKCOPY: source disk drive no.
+                                        ; (overlaps FCB1)
+DEST             = 5Dh                  ; DISKCOPY: destination drive no.
+                                        ; (overlaps FCB1)
+FCB2             = 6Ch                  ; File Control Block (FCB) for
+                                        ; 2nd command line argument
+ARGLEN           = 80h                  ; length of command line arguments
+ARGS             = 81h                  ; command line arguments, as
+                                        ; CR-terminated string
 ; ───────────────────────────────────────────────────────────────────────────
 
+; DISKCOPY internal flags
 ; enum __DISKCOPY_FLAGS__ (bitfield)
-F_ONEDRV         = 1
-F_USR1SID        = 2
-F_DSTWRT         = 8
-F_GOTSIDS        = 10h
-F_DSTBAD         = 20h
-F_CPY2SID        = 40h
-F_FMTDST         = 80h
+F_ONEDRV         = 1                    ; only 1 disk drive (& user needs to
+                                        ; keep swapping disks)?
+F_USR1SID        = 2                    ; user explicitly said ("/1" argument)
+                                        ; that source disk is 1-sided?
+F_DSTWRT         = 8                    ; dest. disk already written to?
+F_GOTSIDS        = 10h                  ; we know no. of sides to copy?
+F_DSTBAD         = 20h                  ; error encountered when writing or
+                                        ; formatting destination disk?
+F_CPY2SID        = 40h                  ; do a 2-sided copy?
+F_FMTDST         = 80h                  ; format destination disk?
 
